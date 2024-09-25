@@ -1,4 +1,5 @@
 import argparse
+import datetime
 import json
 import os
 import urllib.request
@@ -40,6 +41,9 @@ DOC = """
 				</table>
 		</section>
 	</main>
+    <footer>
+        Last updated: {time}
+    </footer>
 </body>
 </html>
 """
@@ -70,7 +74,9 @@ def build_document(statuses):
             </tr>
         """
         table_rows += ret
-    return DOC.format(table_rows=table_rows)
+
+    time = str(datetime.datetime.now())
+    return DOC.format(table_rows=table_rows, time=time)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
