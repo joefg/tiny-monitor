@@ -19,10 +19,14 @@ DOC = """
 
 <body>
 	<header>
-		<hgroup>
-			<h1>Tiny Monitor</h1>
-			<p>A small uptime monitor, by @joefg</p>
-		</hgroup>
+		<nav>
+            <ul>
+			    <li><strong>Tiny Monitor</strong> - A <em>tiny</em> uptime monitor, by @joefg</em></li>
+            </ul>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
 	</header>
 
 	<main>
